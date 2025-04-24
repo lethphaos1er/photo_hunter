@@ -1,0 +1,3 @@
+<footer>
+    copyrigth
+</footer>
