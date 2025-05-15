@@ -5,7 +5,7 @@ function homeAction(PDO $connexion)
 {
     // Je charge les data dans $photos et $authors
     include '../app/models/photosModel.php';
-    $photos = \App\Models\PhotosModel\findAll($connexion);
+    $photos = \App\Models\PhotosModel\findAll($connexion, 3);
 
 
     include '../app/models/authorsModel.php';

@@ -8,7 +8,7 @@
             </div>
             <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
                 <a
-                    href="index.html"
+                    href="?"
                     class="border-b-2 border-indigo-500 text-gray-900 inline-flex items-center px-1 pt-1 text-sm font-medium">
                     Home
                 </a>
@@ -18,7 +18,7 @@
                     Photos
                 </a>
                 <a
-                    href="photographers.html"
+                    href="?autors"
                     class="text-gray-900 inline-flex items-center px-1 pt-1 text-sm font-medium">
                     Photographers
                 </a>

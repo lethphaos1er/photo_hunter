@@ -5,7 +5,7 @@ function indexAction(PDO $connexion)
 {
     // Je charge les data dans $photos et $authors
     include '../app/models/photosModel.php';
-    $photos = \App\Models\PhotosModel\findAll($connexion);
+    $photos = \App\Models\PhotosModel\findAll($connexion, 6);
 
     // je charge pages.home dans $content
     global $content, $title;
