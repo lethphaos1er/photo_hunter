@@ -9,7 +9,7 @@ function homeAction(PDO $connexion)
 
 
     include '../app/models/authorsModel.php';
-    $authors = \App\Models\AuthorsModel\findAll($connexion);
+    $authors = \App\Models\AuthorsModel\findAll($connexion, 2);
 
 
     // je charge pages.home dans $content
