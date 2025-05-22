@@ -1,7 +1,7 @@
 <?php
 namespace App\Models\PhotosModel;
 use \PDO;
-function findAll(PDO $connexion, int $limit = 6): array
+function findAll(PDO $connexion)
 {
     $sql = "SELECT ph.*, 
                    aut.firstname AS author_firstname, 
@@ -9,9 +9,24 @@ function findAll(PDO $connexion, int $limit = 6): array
             FROM photos ph
             JOIN authors aut ON ph.author_id = aut.id
             ORDER BY ph.created_at DESC 
-            LIMIT :limit;";
-    $rs = $connexion->prepare($sql);
-    $rs->bindValue(':limit', $limit, PDO::PARAM_INT);
-    $rs->execute();
+            LIMIT 3;";
+    $rs = $connexion->query($sql);
     return $rs->fetchAll(PDO::FETCH_ASSOC);
+<<<<<<< Updated upstream
+=======
+}
+
+function findOneById(PDO $connexion, string $id): array
+{
+    $sql = "SELECT ph.*, 
+                   aut.firstname AS author_firstname, 
+                   aut.lastname AS author_lastname
+            FROM photos ph
+            JOIN authors aut ON ph.author_id = aut.id
+            WHERE ph.id = :id;";
+    $rs = $connexion->prepare($sql);
+    $rs->bindValue(':id', $id, PDO::PARAM_STR);
+    $rs->execute();
+    return $rs->fetch(PDO::FETCH_ASSOC);
+>>>>>>> Stashed changes
 }

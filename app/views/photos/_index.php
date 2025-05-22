@@ -17,6 +17,7 @@
                         </a>
                     </div>
                 </header>
+<<<<<<< Updated upstream
                 <p class="text-base text-gray-600">
                     <?php
                         echo core\helpers\truncate($photo['resume'], 50);
@@ -24,6 +25,14 @@
                 </p>
                 <a
                     href="photo.html"
+=======
+
+                <p class="text-base text-gray-600">
+                    <?php echo Core\Helpers\truncate($photo['resume']); ?>
+                </p>
+                <a
+                    href="?photos=show&id=<?php echo $photo['id']; ?>"
+>>>>>>> Stashed changes
                     class="mt-4 inline-block bg-indigo-500 text-white py-2 px-4 rounded-lg hover:bg-indigo-700">
                     En savoir plus
                 </a>
